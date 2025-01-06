@@ -114,11 +114,12 @@ Instructions on how to use the compiler and tools.
   </div>
   <div class="card" markdown="1">
 
-### Developer News
+### Project and Releases Information
 
 Announcements about the language development.
 
-* [Release Notes](https://crystal-lang.org/blog/#release_notes)
+* [Release Notes](https://crystal-lang.org/releases)
+* [Release Policy](project/release-policy.md)
 * [Crystal Blog](https://crystal-lang.org/blog)
 
   </div>
@@ -137,6 +138,13 @@ If you want to dive into the development of Crystal, these materials give some g
 ### [Contributing Instructions](https://github.com/crystal-lang/crystal/blob/master/CONTRIBUTING.md)
 
 A guide on how to open issues and contribute code to the Crystal project.
+
+  </div>
+  <div class="card" markdown="1">
+
+### [Requests for Comments](https://github.com/crystal-lang/rfcs/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
+
+The [RFC process](https://github.com/crystal-lang/rfcs) provides a consistent and controlled path to discuss substantial changes in the Crystal project and form a community consensus.
 
   </div>
   <div class="card" markdown="1">

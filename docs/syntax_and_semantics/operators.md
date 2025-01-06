@@ -63,7 +63,7 @@ v1 = Vector2.new(1, 2)
 -v1 # => Vector2(@x=-1, @y=-2)
 ```
 
-## Binary operators
+### Binary operators
 
 Binary operators have two operands. Thus, a method implementation receives
 exactly one argument representing the second operand. The first operand is the
@@ -98,7 +98,7 @@ There can be reasonable exceptions though. For example in the standard library
 the float division operator `/` on integer types always returns `Float64`,
 because the quotient must not be limited to the value range of integers.
 
-## Ternary operators
+### Ternary operators
 
 The [conditional operator (`? :`)](./ternary_if.md) is the only ternary
 operator. It not parsed as a method, and its meaning cannot be changed.
@@ -120,14 +120,14 @@ ones.
 | Additive | `+`, `&+`, `-`, `&-` |
 | Shift | `<<`, `>>` |
 | Binary AND | `&` |
-| Binary OR/XOR | `|`,`^` |
+| Binary OR/XOR | `\|`,`^` |
 | Equality and Subsumption | `==`, `!=`, `=~`, `!~`, `===` |
 | Comparison | `<`, `<=`, `>`, `>=`, `<=>` |
 | Logical AND | `&&` |
-| Logical OR | `||` |
+| Logical OR | `\|\|` |
 | Range | `..`, `...` |
 | Conditional | `?:` |
-| Assignment | `=`, `[]=`, `+=`, `&+=`, `-=`, `&-=`, `*=`, `&*=`, `/=`, `//=`, `%=`, `|=`, `&=`,`^=`,`**=`,`<<=`,`>>=`, `||=`, `&&=` |
+| Assignment | `=`, `[]=`, `+=`, `&+=`, `-=`, `&-=`, `*=`, `&*=`, `/=`, `//=`, `%=`, `\|=`, `&=`,`^=`,`**=`,`<<=`,`>>=`, `\|\|=`, `&&=` |
 | Splat | `*`, `**` |
 
 <!-- markdownlint-enable no-space-in-code -->
@@ -185,7 +185,7 @@ ones.
 | Operator | Description | Example | Overloadable | Associativity |
 |---|---|---|---|---|
 | `&` | binary AND | `1 & 2` | yes | left |
-| `|` | binary OR | `1 | 2` | yes | left |
+| `\|` | binary OR | `1 \| 2` | yes | left |
 | `^` | binary XOR | `1 ^ 2` | yes | left |
 
 ### Relational operators
@@ -283,7 +283,7 @@ For instance, `a == b <= c` is equivalent to `a == b && b <= c`, while `a <= b =
 | Operator | Description | Example | Overloadable | Associativity |
 |---|---|---|---|---|
 | `&&` | [logical AND](and.md) | `true && false` | no | left |
-| `||` | [logical OR](or.md) | `true || false` | no | left |
+| `\|\|` | [logical OR](or.md) | `true \|\| false` | no | left |
 
 ### Range
 
@@ -292,7 +292,7 @@ literals.
 
 | Operator | Description | Example | Overloadable |
 |---|---|---|---|
-| `..` | range | `1..10` | no |
+| `..` | inclusive range | `1..10` | no |
 | `...` | exclusive range | `1...10` | no |
 
 ### Splats
@@ -362,13 +362,13 @@ The receiver can't be anything else than a variable or call.
 | `/=` | division *and* assignment | `i /= 1` | no | right |
 | `//=` | floor division *and* assignment | `i //= 1` | no | right |
 | `%=` | modulo *and* assignment | `i %= 1` | yes | right |
-| `|=` | binary or *and* assignment | `i |= 1` | no | right |
+| `\|=` | binary or *and* assignment | `i \|= 1` | no | right |
 | `&=` | binary and *and* assignment | `i &= 1` | no | right |
 | `^=` | binary xor *and* assignment | `i ^= 1` | no | right |
 | `**=` | exponential *and* assignment | `i **= 1` | no | right |
 | `<<=` | left shift *and* assignment | `i <<= 1` | no | right |
 | `>>=` | right shift *and* assignment | `i >>= 1` | no | right |
-| `||=` | logical or *and* assignment | `i ||= true` | no | right |
+| `\|\|=` | logical or *and* assignment | `i \|\|= true` | no | right |
 | `&&=` | logical and *and* assignment | `i &&= true` | no | right |
 
 ### Index Accessors
